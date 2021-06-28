@@ -1,13 +1,19 @@
 #include "holberton.h"
 
 /**
- * main - check the code for ALX School students.
- * @a: Change value of a to 42.
- * @b: Changes value of b to 98.
- * Return: Always 0.
+ * _strlen - returns the length of a string..
+ * @s: value to be evaluate.
+ * Return: not.
  */
-void swap_int(int *a, int *b)
+
+int _strlen(char *s)
 {
-	*a = 42;
-	*b = 98;
+	int len = 0;
+
+	while (*s != '\0')
+	{
+		s++;
+		len++;
+	}
+	return (len);
 }
