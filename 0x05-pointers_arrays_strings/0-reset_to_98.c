@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - changes the value of n.
- *
+ * @n: internal value for changing the mian n value.
  * Return: Always 0.
  */
 
