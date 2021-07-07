@@ -4,7 +4,8 @@
  * _puts_recursion - Uses Recursion to print a String.
  *
  * @s: Runs all characters in the String.
- * Return: Always 0.
+ *
+ * Return: void.
  */
 void _puts_recursion(char *s)
 {
