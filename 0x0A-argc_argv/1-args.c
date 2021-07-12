@@ -1,15 +1,12 @@
-#include "holberton.h"
 #include <stdio.h>
-
 /**
- * main - Prints the number os strings with out the comand.
- * @argc: argument count.
- * @argv: argument variable.
- *
- * Return: 0.
+ * main - Entry point
+ * @argc: number of parameters
+ * @argv: An array with the parameters passed to the function
+ * Description: prints how many parameters it takes
+ * Return: Aways zero
  */
-
-int main(int argc, char *argv[])
+int main(int argc, __attribute__((unused)) char **argv)
 {
 	printf("%d\n", argc - 1);
 	return (0);
