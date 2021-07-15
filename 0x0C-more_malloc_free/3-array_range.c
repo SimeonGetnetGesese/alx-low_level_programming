@@ -1,30 +1,50 @@
 #include <stdlib.h>
-#include "holberton.h"
+#include <stdio.h>
+int length(int min, int max);
 
 /**
- * *array_range - creates an array of integers
- * @min: minimum range of values stored
- * @max: maximum range of values stored and number of elements
- *
- * Return: pointer to the new array
+ * array_range - Allocates and writes an array and all the values needed
+ * @min: the starting point
+ * @max: the ending point
+ * Return: Pointer to the array
  */
 int *array_range(int min, int max)
 {
-	int *ptr;
-	int i, size;
+	int i;
+	int len;
+	int *heap_array;
 
 	if (min > max)
 		return (NULL);
 
-	size = max - min + 1;
+	len = length(min, max);
 
-	ptr = malloc(sizeof(int) * size);
-
-	if (ptr == NULL)
+	heap_array = malloc(sizeof(int) * len);
+	if (heap_array == NULL)
 		return (NULL);
 
-	for (i = 0; min <= max; i++)
-		ptr[i] = min++;
+	for (i = 0; min <= max ; i++)
+	{
+		heap_array[i] = min;
+		min++;
+	}
+	return (heap_array);
+}
 
-	return (ptr);
+/**
+ * length - Calculates the length of the array
+ * @min: the starting point
+ * @max: the ending point
+ * Return: The total length for the array
+ */
+int length(int min, int max)
+{
+	int l;
+
+	for (l = 0; min != max; min++)
+	{
+		l++;
+	}
+	l++;
+	return (l);
 }
