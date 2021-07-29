@@ -1,20 +1,12 @@
 #include <stdio.h>
-void myStartupFun(void)__attribute__ ((constructor));
+
+void first(void) __attribute__ ((constructor));
 
 /**
- * myStartupFun - Function that runs before main
+ * first - prints a sentence before the main
+ * function is executed
  */
-void myStartupFun(void)
-{
-	printf("You're beat! and yet, you must allow,\n");
-	printf("I bore my house upon my back!\n");
-#include <stdio.h>
-void myStartupFun(void)__attribute__ ((constructor));
-
-/**
- * myStartupFun - Function that runs before main
- */
-void myStartupFun(void)
+void first(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
